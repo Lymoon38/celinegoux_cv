@@ -23,16 +23,20 @@ body {
   
   header p {
     font-size: 1.2rem;
+    margin-top: 0.5rem;
   }
   
   section {
     padding: 2rem;
     border-bottom: 1px solid #333;
+    margin: 20px 0;
   }
   
   h2 {
     color: #9b59b6;
+    font-size: 1.8rem;
     text-shadow: 0 0 5px #9b59b6;
+    margin-bottom: 10px;
   }
   
   a {
@@ -40,8 +44,24 @@ body {
     text-decoration: none;
   }
   
+  a:hover {
+    text-decoration: underline;
+  }
+  
   ul {
     padding-left: 1.2rem;
+  }
+  
+  ul li {
+    font-size: 1.1rem;
+    color: #bbb;
+    margin-bottom: 8px;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
   }
   
   .skills span {
@@ -52,5 +72,64 @@ body {
     margin: 0.3rem;
     border-radius: 5px;
     text-shadow: 0 0 5px #00ffe7;
+    transition: background 0.3s ease, color 0.3s ease;
   }
   
+  .skills span:hover {
+    background: #00ffe7;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+  
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    section {
+      padding: 1rem;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    .skills {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+  }
+  
+  footer li {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+  
+  footer a {
+    color: #00ffe7;
+    text-decoration: none;
+    text-shadow: 0 0 3px #00ffe7;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }

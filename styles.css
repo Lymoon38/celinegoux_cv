@@ -1,0 +1,157 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #eee;
+  transition: background 0.4s, color 0.4s;
+}
+
+body.light-mode {
+  background-color: #fdfdfd;
+  color: #111;
+}
+
+header, footer {
+  text-align: center;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #00ffff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+body.light-mode h1,
+body.light-mode h2 {
+  color: #222;
+  text-shadow: none;
+}
+
+a {
+  color: #ff00ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: 2px solid currentColor;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  color: #0ff;
+  background-color: #222;
+  border-radius: 8px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #0ff;
+  margin-top: 10px;
+  box-shadow: 0 0 10px #0ff;
+  animation: avatarGlow 2s infinite alternate;
+}
+
+@keyframes avatarGlow {
+  from {
+    box-shadow: 0 0 10px #0ff;
+  }
+  to {
+    box-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
+  }
+}
+
+.skills span {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 15px;
+  border: 1px solid #0ff;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+  transition: transform 0.3s ease;
+}
+
+.skills span:hover {
+  transform: scale(1.1);
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+footer ul li a {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid #0ff;
+  border-radius: 20px;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+  transition: transform 0.3s ease;
+}
+
+footer ul li a:hover {
+  transform: scale(1.1);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px solid #0ff;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #ff00ff;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #0ff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 5px;
+  box-shadow: 0 0 10px #0ff;
+}
+
+@media (max-width: 600px) {
+  .skills span {
+    display: block;
+    margin: 8px auto;
+  }
+
+  .avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
